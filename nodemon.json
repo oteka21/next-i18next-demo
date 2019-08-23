@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "ignore": [".next", "pages", "static"],
+  "execMap": {
+    "rb": "ruby",
+    "pde": "processing --sketch={{pwd}} --run"
+  }
+}
