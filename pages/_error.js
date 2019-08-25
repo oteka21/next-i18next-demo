@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { withTranslation } from '../i18n'
 
 class Error extends React.Component{
-    static getInitialProps({ res, err }) {
+    static async getInitialProps({ res, err }) {
       const statusCode = res ? res.statusCode : err ? err.statusCode : null;
       return { 
           statusCode,
@@ -44,6 +44,5 @@ class Error extends React.Component{
       )
     }
   }
-
 
   export default withTranslation('error')(Error)

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node server.js",
+    "lint": "standard",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
@@ -18,7 +19,10 @@
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
-  "devDependencies": {
-    "nodemon": "1.19.1"
+  "devDependencies": {},
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
