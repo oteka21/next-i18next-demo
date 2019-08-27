@@ -12,11 +12,11 @@ class Homepage extends React.Component {
     return (
       <Fragment>
         <div>{this.props.t('title')}</div>
-        <button
-          onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')}
-        >
-          Change locale
-        </button>
+        <select onChange={ e => i18n.changeLanguage(e.target.value) }>
+            <option value='en'>en</option>
+            <option value='de'>de</option>
+            <option value='fr'>fr</option>
+        </select>
       </Fragment>
     )
   }
